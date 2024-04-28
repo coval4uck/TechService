@@ -1,0 +1,87 @@
+
+@import './common/mixins';
+
+@import './component/btn';
+
+@import './layout/header';
+@import './layout/hero-section';
+@import './layout/challenge-section';
+@import './layout/services-section';
+@import './layout/trusted-section';
+@import './layout/brand-section';
+@import './layout/choose-section';
+@import './layout/insights-section';
+@import './layout/teams-section';
+@import './layout/started-section';
+@import './layout/footer';
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+
+}
+.lock{
+    overflow-y: hidden;
+}
+ul{
+    list-style: none;
+}
+.main{
+    overflow-x: hidden;
+    
+}
+.conteiner{
+    max-width: 1344px;
+    margin: 0 auto;
+}
+
+.samsung-icon{
+    max-width: 176px;
+    
+}
+.microsoft-icon{
+    max-width: 246px;
+}
+.google-icon{
+    max-width: 170px;
+   
+}
+.slack-icon{
+    max-width: 178px;
+}
+.lg-icon{
+    max-width: 100px;
+}
+.sony-icon{
+    max-width: 154px;
+}
+@media(max-width:768px){
+    .samsung-icon{
+        width: 70px;
+    }
+    .microsoft-icon{
+        width: 98px;
+    }
+    .google-icon{
+        width: 68px;
+       
+    }
+    .slack-icon{
+        width: 71px;
+    }
+    .lg-icon{
+        width: 40px;
+    }
+    .sony-icon{
+        width: 62px;
+    }
+}
+
+
+
+.title{
+    
+}

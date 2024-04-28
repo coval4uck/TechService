@@ -1,0 +1,81 @@
+.footer{
+    font-family: 'Epilogue',regular;
+    padding: 0 20px;
+    &__conteiner{
+        display: flex;
+        justify-content: space-between;
+    }
+    &__menu{
+        display: flex;
+        gap: 140px;
+    }
+    &__item{
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        &-title{  
+            @include fonts(16px,400,25px,rgba(10, 20, 47, 1))
+        }
+        &-link{
+            @include fonts(16px,400,auto,rgba(10, 20, 47, 0.5));
+            text-decoration: none;
+        }  
+    }
+    &__form{
+        background: rgba(32, 60, 134, 0.05);
+        padding: 32px 46px;
+        max-width: 370px;
+        border-radius: 30px;
+    }
+    &__form-title{
+        @include fonts(16px,400,25px,rgba(10, 20, 47, 1));
+        margin-bottom: 18px;
+    }
+    &__form-email{
+        display: flex;
+        align-items: center;
+        margin-bottom: 18px;
+    }
+    &__form-input{
+        @include fonts(14px,400,25px,rgba(10, 20, 47, 0.6));
+        padding: 18px 40px 18px 20px;
+        border-radius: 30px;
+        border: none;
+    }
+    &__form-btn{
+        transform: translateX(-40px);
+        padding: 20px;
+        border-radius: 50%;
+        border: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: rgba(49, 113, 222, 1);
+    }
+    &__form-icon{
+       width: 17px;
+        height: 14px;
+        fill: rgba(255, 255, 255, 1);
+    }
+    &__form-text{
+        font-size: 12px;
+        line-height: 20px;
+        color: rgba(10, 20, 47, 0.6);
+        font-weight: 400;
+    }
+    @media (max-width:1024px) {
+        &__conteiner{
+            align-items: center;
+            flex-direction: column;
+            gap: 50px;
+        }
+        &__menu{
+            gap: 24px 70px;
+            flex-wrap: wrap;
+        }
+        &__form{
+            width: 338px;
+            padding: 32px 30px;
+        }
+    }
+}

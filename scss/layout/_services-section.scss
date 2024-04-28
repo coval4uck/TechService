@@ -1,0 +1,97 @@
+.services-section{
+    width: 100%;
+    padding: 123px 48px;
+    &__wrapper-title{
+        margin: 0 auto;
+        max-width: 840px;
+        display: flex;
+        gap: 18px;
+        align-items: start;
+        margin-bottom: 79px;
+    }
+    &__title{
+        font-family: 'epilogue',medium;
+        @include fonts(clamp(1.5rem, 1.188rem + 1.56vw, 2.5rem),500,60px,rgba(61, 61, 61, 1));
+    }
+    
+    &__cards{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 48px 0px;
+        padding: 20px;
+    }
+    &__card{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 31%;
+        min-width: 270px;
+        max-height: 320px;
+        padding: 27px 28px 38px 28px;
+        border-radius: 35px;
+        box-shadow:0px 7px 14px 0px rgba(0, 0, 0, 0.13);
+        &-icon{
+            width: 50px;
+            height: 50px;
+            margin-bottom: 35px;
+        }
+        &-title{
+            font-family: 'Epilogue',medium;
+            @include fonts(clamp(1.25rem, 1.094rem + 0.78vw, 1.75rem),500,40px,rgba(61, 61, 61, 1));
+            margin-bottom: 19px;
+        }
+        &-text{
+            font-family: 'Epilogue',regular;
+            @include fonts(clamp(0.75rem, 0.672rem + 0.39vw, 1rem),400,24px,rgba(82, 82, 82, 1))
+
+        }
+    }
+    @media (max-width:1024px){
+        &__card{
+            min-height: 220px;
+            &-icon{
+                width: 36px;
+                height: 36px;
+                margin-bottom: 24px;
+            }
+            &-title{
+                line-height: 30px;
+                margin-bottom: 8px;
+            }
+            &-text{
+                line-height: 17px;
+            }
+        }
+    }
+    @media (max-width:768px){
+        padding: 26px;
+        &__wrapper-title{
+            margin-bottom: 27px;
+        }
+        &__title{
+            line-height: 43px;
+            text-align: start;
+        }
+        &__title-img{
+            width: 66px;
+            height: 60px;
+        }
+        &__cards{
+            flex-wrap: nowrap;
+            justify-content: start;
+            gap: 0 0;
+        }
+        &__card{
+            min-width: 220px;
+            min-height: 285px;
+            padding: 20px 20px 32px 20px;
+            &-icon{
+                margin-bottom: 24px;
+            }
+            &-title{
+                margin-bottom: 12px;
+            }
+        }
+    }
+}

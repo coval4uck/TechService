@@ -1,0 +1,86 @@
+
+.buttons-scroll{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    gap: 18px;
+    &__btn{
+        width: 65px;
+        height: 65px;
+        border-radius: 50%;
+        border: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    &__btn-right{
+        transform: rotate(-90deg);
+    }
+    &__btn-left{
+        transform: rotate(90deg);
+    }
+    & svg{
+        width: 32px;
+        height: 32px;
+    }
+    @media (max-width:768px){
+        gap: 12px;
+        &__btn{
+            width: 42px;
+            height: 42px;
+        }
+        & svg{
+            width: 21px;
+            height: 21px;
+        }   
+    }
+}
+
+.btn-burger{
+    z-index: 20;
+    padding: 15px 4px;
+    border: none;
+    background: inherit;
+    display: none;
+    & span,
+    & span::before,
+    & span::after{
+        content: '';
+        border-radius: 10px;
+        display: block;
+        width: 30px;
+        height: 2px;
+        background: rgba(41, 45, 50, 1);
+        transition: all 0.3s;
+    }
+    & span{
+        position: relative;
+    }
+    & span::before{
+        position: absolute;
+        bottom:10px;   
+    }
+    & span::after{
+        position: absolute;
+        top: 10px; 
+    }
+    &__close{
+        span{
+            background: transparent;
+        }
+        span::before{
+            bottom: 0;
+            transform: rotate(-45deg);
+        }
+        span::after{
+            top: 0;
+            transform: rotate(45deg);
+        }
+    }
+    @media (max-width:1024px){
+        display: block;
+    }
+}
+
+
+

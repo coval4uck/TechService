@@ -1,0 +1,59 @@
+.teams-section{
+    padding: 89px 20px;
+    &__conteiner{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 57px;
+    }
+    &__title{
+        @include fonts(clamp(1.625rem, 1.352rem + 1.37vw, 2.5rem),500,62px,rgba(61, 61, 61, 1));
+        font-family: 'epilogue',medium;
+    }
+    &__btn{
+        border: none;
+        background: rgba(49, 113, 222, 1);
+        color: rgba(255, 255, 255, 1);
+        padding: 18px 25px;
+        border-radius: 50px;
+        font-size: 16px;
+        font-family: 'epilogue',medium;
+        font-weight: 500;
+    }
+    &__items{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center; 
+    }
+    &__item{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0 -15px;
+        &-photo{
+            border-radius: 50%;
+            width: 100%;
+            margin-bottom: 27px;
+        }
+        &-title{
+            padding: 0 16px;
+            text-align: center;
+            @include fonts(clamp(1.125rem, 1.008rem + 0.59vw, 1.5rem),500,32px,rgba(61, 61, 61, 1));
+            font-family: 'epilogue',medium;
+            width: 140px;
+        }
+    }
+    @media (max-width:768px){
+        padding-top: 0 20px;
+        &__conteiner{
+            gap: 16px;
+        }
+        &__item{
+            width: 160px;
+            &-photo{
+                margin-bottom: 20px;
+            }
+        }
+    }
+    
+}

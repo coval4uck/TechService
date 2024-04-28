@@ -1,0 +1,61 @@
+.started-section{
+    font-family: 'Epilogue',semiBold;
+    &__conteiner{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 0 48px;
+        
+    }
+    &__content{
+        border-radius: 36px;
+        padding: 110px 12px 291px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        background: linear-gradient(190deg,rgba(72, 117, 193, 1),rgba(74, 192, 242, 1));
+    }
+    &__title{
+        @include fonts(clamp(2rem, 1.688rem + 1.56vw, 3rem),600,68px,rgba(255, 255, 255, 1));
+        margin-bottom: 33px;
+        max-width: 900px;
+        text-align: center;
+    }
+    &__btn{
+        font-family: 'Epilogue',semiBold;
+        font-size: 16px;
+        font-weight: 600;
+        padding: 18px 25px;
+        border: none;
+        color: rgba(94, 93, 239, 1);
+        border-radius: 50px;
+    }
+    &__img{
+        transform: translateY(-250px);
+        max-width: 80%;
+        margin-bottom: 112px;
+    }
+
+    @media(max-width:768px){
+        &__conteiner{
+            padding: 0 10px;
+        }
+        &__content{
+            padding: 108px 12px 132px;
+            margin-bottom: 104px;
+        }
+        &__title{
+            line-height: 48px;
+            margin-bottom: 42px;
+        }
+        &__img{
+            width: 70%;
+            min-width: 310px;
+            transform: translateY(0);
+        }
+    }
+    
+
+}

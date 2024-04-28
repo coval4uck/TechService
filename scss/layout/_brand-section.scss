@@ -1,0 +1,117 @@
+.brands-section{
+    padding: 97px 40px 50px;
+    &__content{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 45px;
+    }   
+    &__img{
+        width: 55%;
+    }    
+    &__info{
+        min-width: 257px;
+        width: 40%;
+    }
+    &__title{
+        font-family: 'roboto flex',semiBold;
+        @include fonts(clamp(1.625rem, 1.352rem + 1.37vw, 2.5rem),500,54px,rgba(61, 61, 61, 1));
+        margin-bottom: 38px;
+    }
+    &__text{
+        font-family: 'roboto flex',semiBold;
+        @include fonts(clamp(0.75rem, 0.594rem + 0.78vw, 1.25rem),500,25px,rgba(82, 82, 82, 1));
+    }
+    &__cards{
+        padding: 2px;
+        z-index: 2;
+        margin-top: -250px;
+        display: flex;
+        margin-bottom: 80px;
+    }
+    &__card{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 20px;
+        background: rgba(255, 255, 255, 1);
+        flex-shrink: 0;
+        width: 396px;
+        padding: 35px;
+        border-radius: 22px;
+        box-shadow:0px 2px 5px 0px rgba(0, 0, 0, 0.13);
+        &-betyg{
+            width: 50%;
+        }
+        &-title{
+            @include fonts(clamp(1rem, 0.844rem + 0.78vw, 1.5rem),bold,36px,rgba(30, 27, 57, 1));
+            font-family: 'DM Sans',Bold;
+            margin-bottom: 10px;
+        }
+        &-text{
+            font-family: 'DM Sans',Regular;
+            @include fonts(clamp(0.75rem, 0.652rem + 0.49vw, 1.063rem),normal,30px,rgba(110, 108, 131, 1));
+        }
+        &-brand{
+            border-top: 2px solid rgba(222, 222, 233, 1);
+            padding-top: 35px;
+            display: flex;
+            gap: 24px;
+            align-items: center;  
+        }
+        &-name{
+            font-family: 'DM Sans',Bold;
+            @include fonts(clamp(0.813rem, 0.676rem + 0.68vw, 1.25rem),bold,27px,rgba(30, 27, 57, 1));
+        }
+        &-profession{
+            font-family: 'DM Sans',Bold;
+            @include fonts(clamp(0.563rem, 0.484rem + 0.39vw, 0.813rem),bold,27px,rgba(82, 82, 82, 1));
+        }
+    }
+    @media (max-width:1024px){
+        &__cards{
+            margin-top: 0;
+        }
+    }
+    @media(max-width:768px){
+        padding-left: 10px;
+        padding-right: 10px;
+        &__content{
+            flex-wrap: wrap;
+            justify-content: center;
+            text-align: center;
+        }
+        &__img{
+            width: 300px;
+            margin-bottom: 38px;
+        }
+        &__title{
+            line-height: 40px;
+            margin-bottom: 18px;
+        }
+        &__text{
+            line-height: 12px;
+        }
+        &__cards{
+            margin-bottom: 27px;
+        }
+        &__card{
+            padding: 22px;
+            width: 260px;
+            &-title{
+                line-height: 24px;
+            }
+            &-text{
+                line-height: 20px;
+            }
+            &-brand{
+                padding-top: 23px;
+            }
+            &-name{
+                line-height: 18px;
+            }
+            &-profession{
+                line-height: 18px;
+            }
+        }  
+    }
+}

@@ -1,0 +1,76 @@
+.insights-section{
+    font-family: 'epilogue',medium;
+    padding: 130px 48px 44px;
+    
+    &__wrapper-title{
+        display: flex;
+        gap: 24px;
+        align-items: start;
+        margin-bottom: 32px;
+    }
+    &__title{
+        @include fonts(clamp(1.625rem, 1.352rem + 1.37vw, 2.5rem),500,68px,rgba(61, 61, 61, 1));
+    }
+    &__cards{
+        display: flex;
+    }
+    &__card{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 47px;
+        width: 535px;
+        flex-shrink: 0;
+        padding: 32px;
+        &-img{
+            border-radius: 15px;
+            margin-bottom: 19px;
+        }
+        &-title{
+            @include fonts(clamp(1rem, 0.844rem + 0.78vw, 1.5rem),500,32px,rgba(61, 61, 61, 1));
+            margin-bottom: 19px;
+        }
+        &-text{
+            @include fonts(clamp(0.75rem, 0.672rem + 0.39vw, 1rem),400,24px,rgba(82, 82, 82, 1));
+            font-family: 'epilogue',regular;
+            
+        }
+        &-info{
+            display: flex;
+            align-items: center;
+            gap:6px ;
+        }
+        &-author{
+            @include fonts(clamp(0.75rem, 0.691rem + 0.29vw, 0.938rem),500,23px,rgba(61, 61, 61, 1));
+        }
+    }
+    @media(max-width:768px){
+        padding: 52px 24px;
+        & .buttons-scroll{
+            display: none;
+        }
+        &__title{
+            line-height: 38px;
+        }
+        &__cards{
+            margin-bottom: 41px;
+        }
+        &__card{
+            width: 310px;
+            padding: 14px;
+            gap: 10px;
+            &-img{
+                width: 274px;
+                margin-bottom: 11px;
+            }
+            &-title{
+                line-height: 24px;
+                margin-bottom: 11px;
+            }
+            &-text{
+                line-height: 16px;
+               
+            }
+        }
+    }
+}
